@@ -1,18 +1,34 @@
+<!DOCTYPE html>
+<html>
 <p id="notice"><%= notice %></p>
 
 <h1>Products</h1>
 
 <table>
   <thead>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
     <tr>
       <th>Name</th>
       <th>Quantity</th>
       <th>User</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead> 
+    <body>
+          <a href="#">
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+          </a>        
+    </body>
+  </html>
+  
 
   <tbody>
+  
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
@@ -23,6 +39,7 @@
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    
   </tbody>
 </table>
 
